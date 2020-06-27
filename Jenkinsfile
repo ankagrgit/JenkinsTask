@@ -4,7 +4,7 @@ node {
    stage('Preparation') { // for display purposes
      checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/githubusers20/JenkinsTask.git']]])
            
-      mvnHome = tool 'maven1'
+      mvnHome = tool 'AnyMaven'
    }
    stage('Build') {
       // Run the maven build
